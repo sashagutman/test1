@@ -1,0 +1,137 @@
+.header{
+    height: clamp(5.625rem, 4.943rem + 3.41vw, 7.5rem);
+    /* box-shadow: 1px 1px 5px #99BAED; */
+    margin: 10px 0 0 0;
+}
+
+
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.menu__item{
+    display: flex;
+    justify-content: center;
+    gap: clamp(0.625rem, -0.057rem + 3.41vw, 2.5rem);
+}
+
+.menu__close img{
+    width: 50px;
+    height: 45px;
+}
+
+.menu__close{
+    display: none;
+}
+
+.menu__list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu__link, .user-action__link img{
+    transition: all .5s;
+}
+
+.menu__link:hover{
+    transform: scale(1.1);
+    color: #FBB400;
+}
+
+.user-action{
+    display: flex;
+    align-items: center;
+    gap: clamp(0rem, -1.364rem + 6.82vw, 3.75rem);
+}
+
+.user-action__link img:hover{
+    transform: translateY(5px);
+}
+
+.header__button{
+    transition: all 0.6s;
+}
+
+.header__button:hover{
+    box-shadow: 1px 1px 13px #99BAED;
+}
+
+.menu__burger{
+    display: none;
+    cursor: pointer;
+}
+
+.menu__button{
+    display: none;
+}
+
+
+@media(max-width: 880px){
+    /* значок менюшки */
+    .menu__burger{
+        width: 37px;
+        height: 23px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+    }
+
+    .burger{
+        background-color: #99BAED;
+        height: 3px;
+        width: 100%;
+    }
+     /* значок менюшки */
+
+    .user-action{
+        order: 1;
+    }
+
+
+    .menu__item{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header__menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background: radial-gradient(#A3C1EF, #3e85ee);
+        position: absolute;
+        right: -100%;
+        top: 120px;
+        border-radius: 10px;
+        width: 160px;
+        height: 500px;
+        transition: right .9s;
+    }
+
+    .menu__close{
+        display: block;
+    }
+
+
+
+    
+    .menu__item-open{
+        right: 0;
+    }
+
+    .header__button{
+        display: none;
+    }
+
+    .menu__button{
+        display: block;
+    }
+    
+
+}
